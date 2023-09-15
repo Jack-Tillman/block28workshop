@@ -18,6 +18,9 @@ export default function Navbar() {
               <Link to="/rainbow">
                 Rainbow
               </Link>
+              <Link to="/colorpicker">
+                Custom!
+              </Link>
               <Link to="/">
                 Home
               </Link>
