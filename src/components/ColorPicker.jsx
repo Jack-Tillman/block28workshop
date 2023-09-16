@@ -1,23 +1,30 @@
 import { HexColorPicker } from "react-colorful";
-import { useState, useEffect } from "react";
+//imported HexColorPicker components from an npm package I installed named 'react-colorful
+// Github link: https://github.com/omgovich/react-colorful
 
-const ColorPicker = () => {
-  const [color, setColor] = useState("#aabbcc");
-//a
-
-  useEffect(() => {
-    // updateColor();
-  }, []);
-// https://stackoverflow.com/questions/67117635/change-background-color-using-react-color-picker
-
+const ColorPicker = ({ color, setColor }) => {
   return (
-    <div id="colorpicker-container">
-        <h2>Pick your own color!</h2>
-        <section id="color-section">
-          <HexColorPicker color={color} onChange={(e)=> setColor(e.hex)} />
-        </section>
+    <div 
+      id="colorpicker-container"
+      style={{
+        //inline styling to dynamically update background color of the container
+        backgroundColor: color
+      }}
+    >
+      <h2>Pick your own color!</h2>
+      <section id="color-section">
+        {/* color is set on each change, including mouse dragging*/}
+        <HexColorPicker 
+          color={color} 
+          onChange={setColor}
+        />
+        <p className="value">
+          Your current color is {color}!
+        </p>
+      </section>
     </div>
   )
 };
 
 export default ColorPicker;
+

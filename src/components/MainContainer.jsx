@@ -7,7 +7,7 @@ import Purple from './Purple'
 import Rainbow from './Rainbow'
 import ColorPicker from './ColorPicker'
 
-export default function MainContainer() {
+export default function MainContainer({color, setColor}) {
     return(
         <div id="main-section">
           <Routes>
@@ -16,7 +16,7 @@ export default function MainContainer() {
             <Route path='/pink' element={<Pink />}/>
             <Route path='/purple' element={<Purple />}/>
             <Route path='/rainbow' element={<Rainbow />}/>
-            <Route path='/colorpicker' element={<ColorPicker />}/>
+            <Route path='/colorpicker' element={<ColorPicker color={color} setColor={setColor} />}/>
             <Route path='/' element={<Home />}/>
           </Routes>
         </div>

@@ -1,6 +1,7 @@
 * {
   font-family: arial, sans-serif;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body,
@@ -66,28 +67,49 @@ body > div {
   color:white;
 }
 
-h2 {
-  font-size: inherit;
-  margin: 0 0 12px;
+#colorpicker-container {
+  display:flex;
+  flex-direction: column;
 }
-/* .color-section .react-colorful{
-  margin-bottom: 28px;
-  width:120px;
-  height: 120px;
-} */
+
+h2 {
+  font-size: 24px;
+  margin: 1rem auto;
+}
+
+#color-section {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:1rem auto;
+  padding:2rem;
+}
 
 .colorpicker-container .react-colorful {
-  height: 240px;
+  height: 100%;
 }
 .colorpicker-container .react-colorful__saturation {
   border-radius: 4px 4px 0 0;
 }
+
 .color-section .react-colorful__hue {
-  height: 40px;
+  height: 60px;
   border-radius: 0 0 4px 4px;
+  
 }
 .color-section .react-colorful__hue-pointer {
   width: 12px;
   height: inherit;
   border-radius: 0;
+}
+.color-section .react-colorful{
+  margin-bottom: 28px;
+  width:120px;
+  height: 120px;
+}
+
+.value {
+  margin-top:1rem;
+  font-size:18px;
 }
