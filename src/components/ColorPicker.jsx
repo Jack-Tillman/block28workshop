@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 const ColorPicker = () => {
   const [color, setColor] = useState("#aabbcc");
-
+//a
 
   useEffect(() => {
     // updateColor();
