@@ -5,13 +5,17 @@ import { useState } from 'react';
 
 function App() {
   const [color, setColor] = useState("#aabbcc");
+  const [textColor, setTextColor] = useState("rgb(99, 99, 100)");
 
   return (
     <div id="container">
         <Navbar />
         <MainContainer 
           color={color} 
-          setColor={setColor}/>
+          setColor={setColor}
+          textColor={textColor}
+          setTextColor={setTextColor}
+          />
         <Footer />
     </div>
   )
